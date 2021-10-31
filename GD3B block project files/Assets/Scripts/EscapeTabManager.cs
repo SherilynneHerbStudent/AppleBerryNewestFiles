@@ -15,10 +15,7 @@ public class EscapeTabManager : MonoBehaviour
 
     public void QuitGame()
     {
-        //GM.gamePaused = false;
-        GM.escapeTab.SetActive(false);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        Application.Quit();
     }
 
     public void RestartLevel()
@@ -27,5 +24,13 @@ public class EscapeTabManager : MonoBehaviour
         GM.escapeTab.SetActive(false);
         Time.timeScale = 1;
         SceneManager.LoadScene(1);
+    }
+
+    public void ToMenu()
+    {
+        //GM.gamePaused = false;
+        GM.escapeTab.SetActive(false);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
     }
 }
